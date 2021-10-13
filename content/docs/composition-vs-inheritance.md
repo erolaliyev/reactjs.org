@@ -116,6 +116,14 @@ function WelcomeDialog() {
 Composition works equally well for components defined as classes:
 
 ```js{10,27-31}
+function FancyBorder(props) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+}
+
 function Dialog(props) {
   return (
     <FancyBorder color="blue">
